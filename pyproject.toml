@@ -1,0 +1,66 @@
+# This file tells Python what's needed to build your project.
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+# This is your project's main metadata (PEP 621)
+[project]
+name = "genai-programming"
+description = """all gen AI related project, for exercise
+this project is also structured in a mono repo struture. so 
+the AI can read all the project, the project is inter connected 
+"""
+version = "0.0.1"
+readme = "README.md"
+requires-python = ">=3.13.7"
+license = "MIT"
+
+# no need to 
+dependencies = [
+  # general 
+  "python-dotenv",
+  "fastapi>=0.104.0",
+  "requests>=2.31.0",
+  "numpy<2.0.0",
+  "pydantic>=2.0.0",
+  "uvicorn[standard]>=0.24.0",
+
+  # AI workflow
+  "langchain",
+  "langchain-community",
+  "openai",  
+  "tiktoken", # tiktoken is a fast BPE tokeniser for use with OpenAI's models.
+  "unstructured",
+  "ollama",
+  "anthropic",
+  "litellm",
+  "litellm[proxy]==1.74.0",
+  "cachetools>=5.3.0",
+
+  # Vector Stores
+  "qdrant-client>=1.7.0",
+  "chromadb", # embedding database
+
+  # interfact
+  "streamlit",
+]
+
+# --- Hatch Environment Configuration ---
+# This is the "default" environment you get when you run `hatch shell` with out specify the venv name it will go here 
+# We add common development tools here.
+[tool.hatch.envs.default]
+# The "Set it and Forget it" way to create the hatch venv
+# configure hatch to create the virtual environment inside your project folder (in a .venv folder). 
+# VS Code automatically detects .venv folders, so Pylance will work instantly without manual configuration.
+# This forces the venv to be created in a .venv folder in your project root
+type = "virtual"
+path = ".venv/default"
+workspace.members = [
+  "src/*",
+  "projects/*"
+]
+
+[tool.hatch.envs.agent]
+type = "virtual"
+path = ".venv/agent"
+

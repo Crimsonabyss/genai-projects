@@ -1,0 +1,8 @@
+graft src
+graft data
+graft scripts
+graft tests
+graft docs
+
+# Files must be given as paths relative to the root of the project
+include pyproject.toml README.md sampleConfig.toml 

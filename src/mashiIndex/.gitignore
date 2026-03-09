@@ -1,0 +1,10 @@
+.roo/
+.roo/**
+.claude/
+.claude/** 
+.venv/
+.venv/**
+.vscode
+.vscode/**
+qdrant_storage/
+qdrant_storage/*

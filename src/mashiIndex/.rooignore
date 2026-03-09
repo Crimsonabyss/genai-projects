@@ -1,0 +1,6 @@
+src/Model/
+src/Model/**
+node_modules/
+*.log
+!important.log
+build/

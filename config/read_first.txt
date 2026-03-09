@@ -1,0 +1,3 @@
+# Runtime configs (dev, test, prod)
+# can be in yaml file format 
+# config.py read and set the global variables 

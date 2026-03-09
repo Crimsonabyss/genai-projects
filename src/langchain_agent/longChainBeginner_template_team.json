@@ -1,0 +1,17 @@
+{
+    "name": null,
+    "input_variables": [
+        "city",
+        "colour"
+    ],
+    "optional_variables": [],
+    "input_types": {},
+    "output_parser": null,
+    "partial_variables": {},
+    "metadata": null,
+    "tags": null,
+    "template": "Create a esport team name from {city} and main colour is: {colour} for the CS GO competition",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}
