@@ -8,3 +8,5 @@
 .vscode/**
 qdrant_storage/
 qdrant_storage/*
+
+Modal/
